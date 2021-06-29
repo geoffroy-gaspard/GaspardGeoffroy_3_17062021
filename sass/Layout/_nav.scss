@@ -7,6 +7,13 @@
     &__localisation {
         width: 100%;
         background-color: darken($color: $color-alt, $amount: 5%);
+        color: darken($color: $color-alt, $amount: 65%);
         box-shadow: inset 0 10px 10px -10px darken($color: $color-alt, $amount: 50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__icone {
+            padding-right: 10px;
+        }
     }
 }
