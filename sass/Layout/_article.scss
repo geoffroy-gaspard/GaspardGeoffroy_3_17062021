@@ -24,11 +24,14 @@ a {
         border-radius: 1em/1em;
         margin-bottom: 3%;
         padding: 0;
+
         :hover .icone {
             color: $color-primary;
         }
+
         a {
             display: flex;
+
             .optionnumber {
                 background-color: $color-primary;
                 border-color: $color-primary;
@@ -41,6 +44,7 @@ a {
                 margin-right: 3em;
                 margin-left: -0.7em;
             }
+
             .icone {
                 padding-right: 2em;
                 color: darken($color: $color-alt, $amount: 50%);
@@ -60,10 +64,12 @@ a {
     align-items: center;
     background-color: #f2f2f2;
     padding-bottom: 5%;
+
     &__picturecard {
         width: 90%;
         height: 10em;
     }
+
     &__infos {
         display: grid;
         grid-template-columns: 70% 30%;
@@ -72,6 +78,7 @@ a {
         background-color: white;
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1em;
+
         &__heading {
             grid-column-start: 1;
             grid-column-end: 2;
@@ -80,6 +87,7 @@ a {
             padding-left: 5%;
             margin-bottom: 0;
         }
+
         &__location {
             grid-column-start: 1;
             grid-column-end: 2;
@@ -88,6 +96,7 @@ a {
             padding-left: 5%;
             margin-top: 2%;
         }
+
         &__icone {
             grid-column-start: 2;
             grid-column-end: 3;
@@ -99,6 +108,7 @@ a {
             font-size: 2em;
             color: darken($color: $color-alt, $amount: 50%);
         }
+
         &__iconealt {
             grid-column-start: 2;
             grid-column-end: 3;
@@ -121,8 +131,9 @@ a {
     object-position: bottom;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    z-index:1;
+    z-index: 1;
 }
+
 .newtag {
     background-color: $color-tertiary;
     color: darken($color: $color-tertiary, $amount: 40%);
@@ -143,4 +154,100 @@ a {
 
 .infos__location {
     margin: 2% 0 5% 3%;
+}
+
+.maincontainermenu {
+    position: relative;
+    background-color: $color-alt;
+    padding-bottom: 5%;
+
+    .headerpic {
+        height: 250px;
+    }
+
+    .restaurantpicheader {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        position: relative;
+    }
+
+    &__header {
+        font-family: 'shrikhandregular', sans-serif;
+        background-color: $color-alt;
+        border-top-right-radius: 3em;
+        border-top-left-radius: 3em;
+        padding-top: 8%;
+        width: 100%;
+        position: absolute;
+        top: 196px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            margin: 0 0 0 5%;
+        }
+
+        &__icone {
+            margin-right: 10%;
+            font-size: 2em;
+            color: darken($color: $color-alt, $amount: 50%);
+        }
+
+        &__iconealt {
+            margin-right: 10%;
+            font-size: 2em;
+            color: $color-primary;
+            display: none;
+        }
+    }
+
+    &__order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15%;
+    }
+
+    .menu {
+
+        >h3 {
+            margin: 0 0 4% 5%;
+            padding: 40px 0 1% 0;
+            font-weight: 100;
+            width: 10%;
+            border-bottom: $color-tertiary solid 3px;
+        }
+
+        &__option {
+            background-color: white;
+            display: flex;
+            align-items: flex-end;
+            align-content: center;
+            justify-content: space-between;
+            margin: 0 5% 5% 5%;
+            border-radius: 1em/1em;
+            box-shadow: 0 6px 6px #d2d2d2;
+
+            &__title {
+                width: 75%;
+                font-size: 95%;
+
+                h3 {
+                    margin: 5% 0 2% 5%;
+                }
+
+                p {
+                    margin: 0 0 5% 5%;
+                    font-size: 90%;
+                }
+            }
+
+            &__price {
+                margin: 0 0 3.5% 0;
+            }
+        }
+    }
 }
