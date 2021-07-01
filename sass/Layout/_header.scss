@@ -1,8 +1,9 @@
 .header {
     display: grid;
-    grid-template-columns: 28% 72%;
+    grid-template-columns: 10% 90%;
     grid-template-rows: 100%;
     margin-bottom: 3%;
+    padding-top: 1%;
     &__icone {
         display: flex;
         align-self: center;

@@ -3,9 +3,17 @@
     justify-content: center;
     height: 1.5rem;
     margin-bottom: 3%;
+    @include mq(small) {
+        height: 3rem;
+    }
 }
 
 .titlemenu {
     font-family: 'shrikhandregular', sans-serif;
     font-size: 2em;
+    text-align: center;
+    padding-right: 10%;
+    @include mq(xlarge) {
+        font-size: 3em;
+    }
 }

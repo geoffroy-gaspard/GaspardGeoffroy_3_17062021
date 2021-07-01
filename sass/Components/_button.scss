@@ -20,4 +20,11 @@
     width: 45%;
     padding: 3% 0 3% 0;
     margin-bottom: 15%;
+    @include mq(medium) {
+        font-size: 120%;
+        margin-bottom: 40px;
+    }
+    @include mq(xlarge) {
+        font-size: 150%;
+    }
 }

@@ -5,9 +5,18 @@
         font-family: 'shrikhandregular', sans-serif;
         font-size: 1em;
         padding: 5% 0 0 40px;
+        @include mq(medium) {
+            font-size: 2em;
+            padding-top: 40px;
+        }
     }
     ul {
         margin-bottom: 0;
+        @include mq(medium) {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0 25px 0;
+        }
     }
     li {
         list-style: none;
