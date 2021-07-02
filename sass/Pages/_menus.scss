@@ -5,6 +5,7 @@
 
     .headerpic {
         height: 250px;
+
         @include mq(small) {
             height: 450px;
         }
@@ -16,6 +17,7 @@
         object-fit: cover;
         object-position: bottom;
         position: relative;
+
         @include mq(large) {
             object-position: center;
         }
@@ -36,6 +38,7 @@
 
         h1 {
             margin: 0 0 0 5%;
+            font-size: 2em;
         }
 
         &__icone {
@@ -50,10 +53,12 @@
             color: $color-primary;
             display: none;
         }
+
         @include mq(small) {
             top: 400px;
             font-size: 150%;
         }
+
         @include mq(large) {
             top: 370px;
         }
@@ -75,9 +80,11 @@
             font-weight: 100;
             width: 40px;
             border-bottom: $color-tertiary solid 3px;
+
             @include mq(small) {
                 padding-top: 10%;
             }
+
             @include mq(large) {
                 width: 60px;
             }
@@ -104,9 +111,11 @@
                 width: 75%;
                 font-size: 95%;
                 align-self: flex-start;
+
                 @include mq(large) {
                     font-size: 70%;
                 }
+
                 @include mq(xlarge) {
                     font-size: 100%;
                 }
@@ -124,6 +133,7 @@
             &__price {
                 margin: 0 0 3.5% 0;
             }
+
             @include mq(large) {
                 margin: 0 30px 30px 30px;
                 width: 30%;

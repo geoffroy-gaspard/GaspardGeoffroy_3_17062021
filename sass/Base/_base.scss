@@ -2,7 +2,7 @@ body {
     font-family: 'robotoregular', sans-serif;
     margin: 8px 0 8px 0;
     font-size: 85%;
-    
+
     @include mq(small) {
         font-size: 100%;
     }

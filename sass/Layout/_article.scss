@@ -16,6 +16,7 @@ a {
     @include mq(small) {
         text-align: center;
     }
+
     h2 {
         @include mq(small) {
             margin-left: 0;
@@ -61,31 +62,45 @@ a {
                 color: darken($color: $color-alt, $amount: 50%);
             }
         }
+
         @include mq(small) {
             width: 55%;
         }
-        @include mq(large) {
-            width: 25%;
+
+        @include mq(medium) {
+            width: 30%;
             margin-left: 3%;
         }
+
+        @include mq(large) {
+            width: 30%;
+        }
+
         @include mq(xlarge) {
             width: 20%;
         }
     }
+
     @include mq(small) {
         padding-left: 5%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    @include mq(large) {
+
+    @include mq(medium) {
         padding-left: 0;
+    }
+
+    li:nth-child(1) {
+        margin-left: 0;
     }
 }
 
 .maincontainer {
     padding-top: 5%;
     background-color: #f2f2f2;
+
     &__cards {
         @include mq(small) {
             display: grid;
@@ -105,6 +120,7 @@ a {
     &__picturecard {
         width: 90%;
         height: 10em;
+
         @include mq(large) {
             height: 20em;
         }
@@ -147,6 +163,10 @@ a {
             align-items: center;
             font-size: 2em;
             color: darken($color: $color-alt, $amount: 50%);
+
+            :hover {
+                display: none;
+            }
         }
 
         &__iconealt {
