@@ -32,30 +32,50 @@
         width: 100%;
         position: absolute;
         top: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 85% 15%;
+        grid-template-rows: 100%;
 
         h1 {
             margin: 0 0 0 5%;
             font-size: 2em;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
 
         &__icone {
             margin-right: 10%;
             font-size: 2em;
             color: darken($color: $color-alt, $amount: 50%);
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
 
         &__iconealt {
             margin-right: 10%;
             font-size: 2em;
             color: $color-primary;
-            display: none;
+            opacity: 0;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            transition: opacity 0.5s;
+            &:hover {
+                opacity: 1;
+            }
         }
 
         @include mq(small) {
             top: 400px;
+            font-size: 100%;
+        }
+
+        @include mq(medium) {
             font-size: 150%;
         }
 
@@ -75,25 +95,18 @@
         position: relative;
 
         >h3 {
-            margin: 0 0 4% 5%;
-            padding: 40px 0 1% 0;
+            margin: 40px 0 4% 5%;
+            padding: 0 0 1% 0;
             font-weight: 100;
             width: 40px;
             border-bottom: $color-tertiary solid 3px;
 
             @include mq(small) {
-                padding-top: 10%;
+                margin-top: 10%;
             }
 
             @include mq(large) {
                 width: 60px;
-            }
-        }
-
-        &__card {
-            @include mq(large) {
-                display: flex;
-                justify-content: center;
             }
         }
 
@@ -113,10 +126,6 @@
                 align-self: flex-start;
 
                 @include mq(large) {
-                    font-size: 70%;
-                }
-
-                @include mq(xlarge) {
                     font-size: 100%;
                 }
 
@@ -132,11 +141,6 @@
 
             &__price {
                 margin: 0 0 3.5% 0;
-            }
-
-            @include mq(large) {
-                margin: 0 30px 30px 30px;
-                width: 30%;
             }
         }
     }

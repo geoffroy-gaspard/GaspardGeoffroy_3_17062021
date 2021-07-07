@@ -15,7 +15,7 @@
     text-align: center;
     padding-right: 10%;
 
-    @include mq(xlarge) {
+    @include mq(medium) {
         font-size: 3em;
     }
 }
