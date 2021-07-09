@@ -93,6 +93,9 @@
 
     .menu {
         position: relative;
+        opacity: 0;
+        animation: loading-page 1500ms;
+        animation-fill-mode: forwards;
 
         >h3 {
             margin: 40px 0 4% 5%;
@@ -143,5 +146,13 @@
                 margin: 0 0 3.5% 0;
             }
         }
+    }
+
+    .menu:nth-child(4) {
+        animation-delay: 500ms;
+    }
+
+    .menu:nth-child(5) {
+        animation-delay: 1s;
     }
 }
