@@ -14,6 +14,20 @@
         align-items: center;
         justify-content: center;
 
+        .search {
+            color: black;
+            font-weight: bold;
+            background-color: darken($color: $color-alt, $amount: 5%);
+            border: darken($color: $color-alt, $amount: 5%) 0px solid;
+            box-shadow: 0 0 0;
+        }
+
+        .search::placeholder {
+            color: black;
+            font-weight: bold;
+            font-family: 'robotoregular', sans-serif;
+        }
+
         &__icone {
             padding-right: 3%;
         }

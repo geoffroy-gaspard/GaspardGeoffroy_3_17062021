@@ -25,14 +25,16 @@
             <div class="nav__localisation">
                 <div class="nav__localisation__icone"><i class="fas fa-map-marker-alt"></i>
                 </div>
-                <p class="nav__localisation__position"><strong>Paris, Belleville</strong></p>
+                <form class="nav__localisation__position" method="POST" action="traitement.php">
+                    <p><input class="search" type="text" name="recherche" placeholder="Paris, Belleville"></p>
+                </form>
             </div>
             <div class="nav__booking">
                 <div class="booking__heading">
                     <h2>Réservez le menu qui<br> vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 </div>
-                <button class="button__explorer" title="Parcourez nos succulentes options">Explorer nos
+                <button class="button__explorer btn__primary">Explorer nos
                     restaurants</button>
             </div>
         </nav>
@@ -160,8 +162,11 @@
                 Mentions légales
             </li>
             <li>
-                Contact
+                <a href="mailto:geoffroygaspard@yahoo.fr">Contact</a>
             </li>
         </ul>
     </footer>
+    <div class="spinner-wrapper">
+        <span class="spinner"></span>
+    </div>
 </body>

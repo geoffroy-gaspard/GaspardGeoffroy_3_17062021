@@ -36,9 +36,18 @@ a {
         border-radius: 1em/1em;
         margin-bottom: 3%;
         padding: 0;
+        box-shadow: 0 3px 3px #d2d2d2;
 
-        :hover .icone {
-            color: $color-primary;
+        @include mq(large) {
+            :hover .icone {
+                color: $color-primary;
+            }
+        }
+
+        @include mq(250px) {
+            :active .icone {
+                color: $color-primary;
+            }
         }
 
         a {
@@ -177,8 +186,17 @@ a {
             color: $color-primary;
             opacity: 0;
             transition: opacity 0.5s;
-            &:hover {
-                opacity: 1;
+
+            @include mq(250px) {
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+            @include mq(large) {
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }

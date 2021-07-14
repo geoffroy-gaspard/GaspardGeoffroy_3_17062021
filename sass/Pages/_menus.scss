@@ -65,8 +65,17 @@
             grid-row-start: 1;
             grid-row-end: 2;
             transition: opacity 0.5s;
-            &:hover {
-                opacity: 1;
+
+            @include mq(250px) {
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+            @include mq(large) {
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
 
@@ -96,6 +105,7 @@
         opacity: 0;
         animation: loading-page 1500ms;
         animation-fill-mode: forwards;
+        animation-delay: 2s;
 
         >h3 {
             margin: 40px 0 4% 5%;
@@ -120,39 +130,104 @@
             align-content: center;
             justify-content: space-between;
             margin: 0 5% 5% 5%;
+            padding: 1rem;
             border-radius: 1em/1em;
             box-shadow: 0 6px 6px #d2d2d2;
+            height: fit-content;
+            overflow: hidden;
 
             &__title {
                 width: 75%;
                 font-size: 95%;
-                align-self: flex-start;
+                align-self: flex-end;
 
                 @include mq(large) {
                     font-size: 100%;
                 }
 
                 h3 {
-                    margin: 5% 0 2% 5%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin: 0;
                 }
 
                 p {
-                    margin: 0 0 5% 5%;
                     font-size: 90%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin: 0;
                 }
             }
 
             &__price {
-                margin: 0 0 3.5% 0;
+                align-self: flex-end;
+                margin: 0;
+            }
+
+            &__iconewrapper {
+                background-color: $color-tertiary;
+                margin: -1rem -5rem -1rem 1rem;
+                width: 4rem;
+                height: 4.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: .5s;
+
+                @include mq(small) {
+                    height: 5rem;
+                    width: 5rem;
+                    margin-right: -6.4rem;
+                }
+
+                @include mq(large) {
+                    height: 6rem;
+                }
+
+                & .check {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    font-size: 150%;
+                    background-color: $color-tertiary;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    transform: rotate(0deg);
+                    transition-duration: 500ms;
+                }
+            }
+
+            @include mq(250px) {
+                &:active .menu__option__iconewrapper {
+                    margin-right: -1rem;
+                }
+
+                &:active .check {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @include mq(large) {
+                &:hover .menu__option__iconewrapper {
+                    margin-right: -1rem;
+                }
+
+                &:hover .check {
+                    transform: rotate(360deg);
+                }
             }
         }
     }
 
     .menu:nth-child(4) {
-        animation-delay: 500ms;
+        animation-delay: 2500ms;
     }
 
     .menu:nth-child(5) {
-        animation-delay: 1s;
+        animation-delay: 3s;
     }
 }
