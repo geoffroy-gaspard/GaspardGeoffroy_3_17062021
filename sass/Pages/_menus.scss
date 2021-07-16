@@ -165,6 +165,12 @@
             &__price {
                 align-self: flex-end;
                 margin: 0;
+                @include mq(medium) {
+                    margin-right: -70px;
+                }
+                @include mq(xlarge) {
+                    margin-right: -250px;
+                }
             }
 
             &__iconewrapper {
