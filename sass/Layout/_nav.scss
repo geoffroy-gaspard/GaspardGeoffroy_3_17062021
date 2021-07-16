@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     background-color: $color-alt;
 
     &__localisation {
@@ -14,22 +15,32 @@
         align-items: center;
         justify-content: center;
 
-        .search {
-            color: black;
-            font-weight: bold;
-            background-color: darken($color: $color-alt, $amount: 5%);
-            border: darken($color: $color-alt, $amount: 5%) 0px solid;
-            box-shadow: 0 0 0;
-        }
+        &__position {
+            width: 100px;
+            .search {
+                color: black;
+                font-weight: bold;
+                background-color: darken($color: $color-alt, $amount: 5%);
+                border: darken($color: $color-alt, $amount: 5%) 0px solid;
+                box-shadow: 0 0 0;
+                @include mq(large) {
+                    font-size: 1em;
+                }
+            }
 
-        .search::placeholder {
-            color: black;
-            font-weight: bold;
-            font-family: 'robotoregular', sans-serif;
+            .search::placeholder {
+                color: black;
+                font-weight: bold;
+                font-family: 'robotoregular', sans-serif;
+            }
+
+            @include mq(large) {
+                width: 150px;
+            }
         }
 
         &__icone {
-            padding-right: 3%;
+            padding-right: 18px;
         }
     }
 }

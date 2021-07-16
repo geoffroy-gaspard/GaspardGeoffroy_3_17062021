@@ -18,18 +18,21 @@
         background: linear-gradient(0deg, rgb(173, 105, 255) 15%, rgb(252, 122, 234) 100%);
         box-shadow: 0 6px 6px rgb(0 0 0 / 40%);
     }
+
+    @include mq(medium) {
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+
+    @include mq(xlarge) {
+        font-size: 1.2em;
+    }
 }
 
 .button__order {
     width: 45%;
 
-
-    @include mq(medium) {
-        font-size: 120%;
-        margin-bottom: 40px;
-    }
-
     @include mq(xlarge) {
-        font-size: 150%;
+        width: 25%;
     }
 }
