@@ -10,6 +10,20 @@
     }
 }
 
+@keyframes loading-spinner {
+    0% {
+        height: 250%;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    100% {
+        height: 250%;
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
