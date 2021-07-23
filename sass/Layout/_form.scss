@@ -17,12 +17,14 @@
 
         &__position {
             width: 100px;
+
             .search {
                 color: black;
                 font-weight: bold;
                 background-color: darken($color: $color-alt, $amount: 5%);
                 border: darken($color: $color-alt, $amount: 5%) 0px solid;
                 box-shadow: 0 0 0;
+
                 @include mq(large) {
                     font-size: 1em;
                 }

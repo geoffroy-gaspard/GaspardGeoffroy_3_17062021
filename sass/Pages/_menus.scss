@@ -165,9 +165,11 @@
             &__price {
                 align-self: flex-end;
                 margin: 0;
+
                 @include mq(medium) {
                     margin-right: -70px;
                 }
+
                 @include mq(xlarge) {
                     margin-right: -250px;
                 }
@@ -181,16 +183,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition-duration: .5s;
+                transition-duration: 500ms;
 
-                @include mq(small) {
+                @include mq(250px) {
                     height: 5rem;
                     width: 5rem;
                     margin-right: -6.4rem;
                 }
 
                 @include mq(large) {
-                    height: 6.4rem;
+                    height: 6.5rem;
                     width: 6.4rem;
                     margin-right: -7.4rem;
                 }
